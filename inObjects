@@ -12,3 +12,18 @@ mm = [{"name":"manju",rank:"1"},
  
  console.log(mm,mmm)
  
+//-----------------------------------------------------------------
+let mm;
+console.log(mm ? mm : jj)
+
+mm = [{"name":"manju",rank:"1"},
+ {"name":"gopi",rank:"2"},
+ {"name":"jayam",rank:"3"},
+ {"name":"samy",rank:"4"}];
+ 
+ mmm = [...mm];
+ 
+ mm[0] = {...mm , rank : 333};
+ 
+ console.log(mm,mmm)
+ 
