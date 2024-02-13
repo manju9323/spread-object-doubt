@@ -1,0 +1,14 @@
+let mm;
+console.log(mm ? mm : jj)
+
+mm = [{"name":"manju",rank:"1"},
+ {"name":"gopi",rank:"2"},
+ {"name":"jayam",rank:"3"},
+ {"name":"samy",rank:"4"}];
+ 
+ mmm = [...mm];
+ 
+ mmm.push({"name":"samy",rank:"4"});
+ 
+ console.log(mm,mmm)
+ 
