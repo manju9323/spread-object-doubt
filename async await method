@@ -1,0 +1,10 @@
+async function synchronousHelloWorldGoodbye() {
+    console.log('Hello');
+
+    await new Promise(reject => setTimeout(reject, 2000));
+    console.log('World');
+
+    console.log('Goodbye');
+}
+
+synchronousHelloWorldGoodbye();
