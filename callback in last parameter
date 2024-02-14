@@ -1,0 +1,20 @@
+//A callback function is passed as the last parameter in an asynchronous function
+
+const mod = (a, b, callback) => {
+  setTimeout(() => {
+    if (b == 0) {
+      callback("Modulo zero is not allowed");
+    } else {
+      callback(null, a % b);
+    }
+  }, 0);
+};
+
+mod(5, 0, (err, res) => {
+  if (err) {
+    console.log(err,"err");
+  } else {
+    console.log('The result is ' + res);
+  }
+});
+
