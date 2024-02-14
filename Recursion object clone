@@ -1,0 +1,27 @@
+function deepClone(obj) {
+  let clone = Array.isArray(obj) ? [] : {};
+  for (let key in obj) {
+    if (typeof obj[key] === "object" && obj[key] !== null) {
+      clone[key] = deepClone(obj[key]);
+    } else {
+      clone[key] = obj[key];
+    }
+  }
+  return clone;
+}
+
+// Testing the function
+let obj = {
+  a: 1,
+  b: 2,
+  c: {
+    d: 3,
+    e: 4,
+    f: {
+      g: 5
+    }
+  }
+};
+
+let clonedObj = deepClone(obj);
+console.log(clonedObj); // Should print a deep copy of obj
