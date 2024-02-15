@@ -8,3 +8,20 @@ async function synchronousHelloWorldGoodbye() {
 }
 
 synchronousHelloWorldGoodbye();
+
+
+///---------------------------------------------------------
+function call(){
+    return new Promise(resolve => setTimeout(() => resolve("something"), 2000));
+}
+
+async function synchronousHelloWorldGoodbye() {
+    console.log('Hello');
+
+    await call().then(value => console.log(value));
+    console.log('World');
+
+    console.log('Goodbye');
+}
+
+synchronousHelloWorldGoodbye();
